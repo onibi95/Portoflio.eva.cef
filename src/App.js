@@ -14,7 +14,6 @@ function App() {
     <>
       <CustomNavbar />
 
-      <Footer />
 
       <Routes>
         <Route path="/" element={<Home />} />
