@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title-container {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.blue-underline {
+  width: 400px;
+  height: 5px;
+  background-color: #0d6efd;
+  /* Bleu Bootstrap */
+  margin: 30px auto 0;
+}
+
+.title-underline {
+  width: 750px;
+  height: 4px;
+  background-color: #0d6efd;
+  margin-top: 1rem;
+  /* Espacement supplémentaire entre texte et trait */
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+  /* Ajustez cette valeur pour modifier la distance */
+}

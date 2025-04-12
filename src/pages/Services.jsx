@@ -24,6 +24,7 @@ const Services = () => {
             <img
                 src={banner}
                 alt="bannière"
+                class="col-lg-12 col-mb-12 col-sm-12"
             />
 
             {/* Hero Section */}
