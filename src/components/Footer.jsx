@@ -7,16 +7,16 @@ const Footer = () => {
                 <Row>
                     <Col md={4}>
                         <h5>John Doe</h5>
-                        <p>40 rue Laura Dubold<br />69009 Lyon, France<br />Tel: 39 30 40 59<br />john.doe@gmail.com</p>
+                        <p>40 rue Laura Dubold<br />69009 Lyon, France<br />Tel: 39 30 40 59<br /> <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a></p>
                     </Col>
                     <Col md={4}>
                         <h5>Liens utiles</h5>
                         <ul className="list-unstyled">
-                            <li><a href="#/">Accueil</a></li>
+                            <li><a href="/">Accueil</a></li>
                             <li><a href="/Services">Services</a></li>
                             <li><a href="/Portfolio">Portfolio</a></li>
                             <li><a href="/Contact">Me contacter</a></li>
-                            <li><a href="/Legal">Mentions légales</a></li>
+                            <li><a href="/Legales">Mentions légales</a></li>
                         </ul>
                     </Col>
                     <Col md={4}>
