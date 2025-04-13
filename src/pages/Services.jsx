@@ -49,7 +49,6 @@ const Services = () => {
                 </Container>
             </section>
 
-            {/* Footer */}
             <Footer />
         </>
     );

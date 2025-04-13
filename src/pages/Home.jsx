@@ -35,7 +35,7 @@ const Home = () => {
             <Container className="py-5">
                 <Row>
                     {/* Section À propos - Colonne de gauche */}
-                    <Col lg={7} className="mb-5 mb-lg-0">
+                    <Col lg={6} className="mb-5 mb-lg-0">
                         <div className="position-relative mb-4">
                             <h2 className="section-title">
                                 A propos
@@ -63,7 +63,7 @@ const Home = () => {
                     </Col>
 
                     {/* Section Compétences - Colonne de droite */}
-                    <Col lg={5}>
+                    <Col lg={6}>
                         <div className="position-relative mb-4">
                             <h2 className="section-title">
                                 Mes compétences
