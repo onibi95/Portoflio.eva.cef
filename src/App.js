@@ -6,7 +6,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Legales from './pages/Legales';
 import CustomNavbar from './components/Navbar';
-import Footer from './components/Footer';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
 
