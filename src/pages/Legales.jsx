@@ -58,7 +58,6 @@ const Legales = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion >
-            {/* Footer */}
             < Footer />
         </Container>
 

@@ -26,13 +26,14 @@ code {
 }
 
 .title-underline {
-  width: 750px;
+  width: 640px;
   height: 4px;
   background-color: #0d6efd;
   margin-top: 1rem;
   /* Espacement supplémentaire entre texte et trait */
-  position: absolute;
+  /* position: absolute; */
   left: 0;
+  margin-bottom: 30px;
   bottom: -0.8rem;
   /* Ajustez cette valeur pour modifier la distance */
 }
