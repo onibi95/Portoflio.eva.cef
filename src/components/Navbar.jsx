@@ -2,10 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const CustomNavbar = () => {
     const [expanded, setExpanded] = useState(false);
+    const location = useLocation();
 
     return (
         <Navbar
@@ -41,7 +42,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/"
-                            className="mx-2 text-uppercase fw-medium"
+                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Home
@@ -49,7 +50,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/services"
-                            className="mx-2 text-uppercase fw-medium"
+                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/services' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Services
@@ -57,7 +58,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/portfolio"
-                            className="mx-2 text-uppercase fw-medium"
+                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/portfolio' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Portfolio
@@ -65,7 +66,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/contact"
-                            className="mx-2 text-uppercase fw-medium"
+                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/contact' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Contact
@@ -73,7 +74,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/Legales"
-                            className="mx-2 text-uppercase fw-medium"
+                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/Legales' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Mentions légales
