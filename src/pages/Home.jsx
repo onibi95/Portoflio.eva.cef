@@ -1,7 +1,7 @@
 import React from 'react';
 import hero from '../assets/hero-bg.jpg';
 import photoabout from '../assets/john-doe-about.jpg';
-import { ProgressBar, Container, Row, Col, Image } from 'react-bootstrap';
+import { ProgressBar, Container, Row, Col, Image, Button } from 'react-bootstrap';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -16,18 +16,26 @@ const Home = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="hero-container position-relative">
+            <div className="hero-section position-relative">
                 <Image
                     src={hero}
                     alt="John Doe"
                     fluid
                     className="w-100 hero-image"
+                    style={{ height: '100vh', objectFit: 'cover' }}
                 />
-                <div className="hero-overlay d-flex align-items-center justify-content-center">
-                    <div className="text-center text-white">
-                        <h1 className="display-4 fw-bold mb-3">John Doe</h1>
-                        <p className="lead">Développeur Web Full Stack</p>
-                    </div>
+                <div className="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                    <Container className="text-center text-white">
+                        <h1 className="display-2 fw-bold mb-4">Bonjour, je suis John Doe</h1>
+                        <p className="display-5 fw-medium mb-4">Développeur web full stack</p>
+                        <Button
+                            variant="primary"
+                            size="lg"
+                            className="px-4 py-2 mt-3 bg-danger "
+                        >
+                            En savoir plus
+                        </Button>
+                    </Container>
                 </div>
             </div>
 
