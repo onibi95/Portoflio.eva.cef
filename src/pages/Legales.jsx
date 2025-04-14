@@ -1,4 +1,3 @@
-import Footer from '../components/Footer';
 import { Accordion, Container } from 'react-bootstrap';
 
 
@@ -58,7 +57,6 @@ const Legales = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion >
-            < Footer />
         </Container>
 
     )

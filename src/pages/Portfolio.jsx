@@ -1,5 +1,4 @@
 import { Container, Row, Col, Card, Button, ListGroup } from 'react-bootstrap';
-import Footer from '../components/Footer';
 import React from 'react';
 import banner from '../assets/banner.jpg';
 import freshFood from '../assets/portfolio/fresh-food.jpg';
@@ -115,7 +114,7 @@ const Portfolio = () => {
                         ))}
                     </Row>
 
-                    <Footer />
+
                 </Container>
             </section>
         </>

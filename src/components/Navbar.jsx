@@ -10,7 +10,7 @@ const CustomNavbar = () => {
 
     return (
         <Navbar
-            bg="light"
+            bg="dark"
             expand="sm"
             expanded={expanded}
             onToggle={() => setExpanded(!expanded)}
@@ -21,7 +21,7 @@ const CustomNavbar = () => {
                 <Navbar.Brand
                     as={Link}
                     to="/"
-                    className="fw-bold fs-4"
+                    className="fw-bold fs-4 text-white"
                     style={{ letterSpacing: '1px' }}
                     onClick={() => setExpanded(false)}
                 >
@@ -31,9 +31,9 @@ const CustomNavbar = () => {
                 {/* Bouton Burger (visible seulement sur mobile) */}
                 <Navbar.Toggle
                     aria-controls="basic-navbar-nav"
-                    className="border-0"
+                    className="border-0 bg-secondary"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon "></span>
                 </Navbar.Toggle>
 
                 {/* Menu (devient burger sur mobile) */}
@@ -42,7 +42,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/"
-                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/' ? 'active-nav-link' : ''}`}
+                            className={`mx-2 text-uppercase fw-medium text-white ${location.pathname === '/' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Home
@@ -50,7 +50,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/services"
-                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/services' ? 'active-nav-link' : ''}`}
+                            className={`mx-2 text-uppercase fw-medium text-white ${location.pathname === '/services' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Services
@@ -58,7 +58,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/portfolio"
-                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/portfolio' ? 'active-nav-link' : ''}`}
+                            className={`mx-2 text-uppercase fw-medium text-white ${location.pathname === '/portfolio' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Portfolio
@@ -66,7 +66,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/contact"
-                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/contact' ? 'active-nav-link' : ''}`}
+                            className={`mx-2 text-uppercase fw-medium text-white ${location.pathname === '/contact' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Contact
@@ -74,7 +74,7 @@ const CustomNavbar = () => {
                         <Nav.Link
                             as={Link}
                             to="/Legales"
-                            className={`mx-2 text-uppercase fw-medium ${location.pathname === '/Legales' ? 'active-nav-link' : ''}`}
+                            className={`mx-2 text-uppercase fw-medium text-white ${location.pathname === '/Legales' ? 'active-nav-link' : ''}`}
                             onClick={() => setExpanded(false)}
                         >
                             Mentions légales
@@ -82,7 +82,7 @@ const CustomNavbar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 };
 

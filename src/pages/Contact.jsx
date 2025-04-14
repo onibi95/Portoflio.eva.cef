@@ -1,5 +1,4 @@
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import Footer from '../components/Footer';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Contact = () => {
@@ -83,8 +82,12 @@ const Contact = () => {
                         <div className="title-underline"></div>
                     </div>
 
-                    <div className="p-4 rounded">
+                    <div className="px-1 rounded">
                         <address>
+
+                        <h5 className="d-flex align-items-center mb-3">
+                                John Doe
+                            </h5>
                             <p className="d-flex align-items-center mb-3">
                                 <i className="bi bi-map me-3 text-dark"></i>
                                 40 rue Laure Diebold
@@ -109,15 +112,12 @@ const Contact = () => {
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.5972579678963!2d4.805215315569558!3d45.75817997910557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ1JzI5LjQiTiA0wrA0OCcyMS4wIkU!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr"
                             style={{ border: 0 }}
-                            allowFullScreen=""
                             loading="lazy"
                             title="Carte de localisation"
                         ></iframe>
                     </div>
                 </Col>
             </Row>
-
-            <Footer />
         </Container>
     );
 };

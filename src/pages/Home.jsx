@@ -1,18 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import hero from '../assets/hero-bg.jpg';
 import photoabout from '../assets/john-doe-about.jpg';
 import { ProgressBar, Container, Row, Col, Image, Button, Modal } from 'react-bootstrap';
-import Footer from '../components/Footer';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Added CSS for GitHub modal
+const modalStyle = {
+    githubModal: {
+        backgroundColor: '#212529',
+        color: 'white'
+    },
+    githubAvatar: {
+        width: '20vw',
+        margin: '0 auto 20px',
+        display: 'block',
+    },
+    githubInfo: {
+        margin: '10px 0'
+    }
+};
 
 const Home = () => {
     const skills = [
-        { name: "HTML5", level: 90 },
-        { name: "CSS3", level: 80 },
-        { name: "JAVASCRIPT", level: 70 },
-        { name: "PHP", level: 60 },
-        { name: "REACT", level: 50 }
+        { name: "HTML5", level: 90, variant: "danger" },
+        { name: "CSS3", level: 80, variant: "info" },
+        { name: "JAVASCRIPT", level: 70, variant: "warning" },
+        { name: "PHP", level: 60, variant: "success" },
+        { name: "REACT", level: 50, variant: "primary" }
     ];
     const [show, setShow] = useState(false);
     const [githubData, setGithubData] = useState(null);
@@ -82,11 +96,11 @@ const Home = () => {
             </div>
 
             {/* Modal GitHub */}
-            <Modal show={show} onHide={handleClose} centered>
-                <Modal.Header closeButton className="border-0 pb-0">
+            <Modal show={show} onHide={handleClose} centered className="myModal">
+                <Modal.Header closeButton className="border-bottom border-1 border-secondary" style={modalStyle.githubModal}>
                     <Modal.Title className="fw-bold">Mon profil GitHub</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body style={modalStyle.githubModal}>
                     {loading ? (
                         <div className="text-center py-4">
                             <div className="spinner-border text-primary" role="status">
@@ -96,51 +110,66 @@ const Home = () => {
                     ) : error ? (
                         <div className="alert alert-warning">{error}</div>
                     ) : githubData ? (
-                        <>
-                            <Col lg={6}>
-                                <div className='github-avatar'>
-                                    <span>{githubData.image}</span>
-
+                        <div className="d-flex">
+                            {/* Avatar on left */}
+                            <div className="me-4">
+                                <Image 
+                                    src={githubData.image || "https://avatars.githubusercontent.com/u/10639145"}
+                                    style={{...modalStyle.githubAvatar, margin: '0'}}
+                                    alt="GitHub Avatar"
+                                />
+                            </div>
+                            
+                            {/* Content on right */}
+                            <div>
+                                {/* User Info */}
+                                <div className="d-flex align-items-center mb-3 border-bottom border-1 border-secondary p-2">
+                                    <i className="bi bi-person me-2"></i>
+                                    <a href="https://github.com/github-john-doe" target="_blank" rel="noreferrer">
+                                        {githubData.name}
+                                    </a>
                                 </div>
-                            </Col>
-                            <Col lg={6}>
-                                <div className="d-flex mb-3">
-                                    <h5 className="fw-bold mb-0 me-2 bi bi-person"><a href="https://github.com/github-john-doe" target="_blank" rel='external'>{githubData.name}</a></h5>
+                                
+                                {/* Location */}
+                                <div className="d-flex align-items-center mb-3 border-bottom border-1 border-secondary p-2">
+                                    <i className="bi bi-geo-alt-fill me-2"></i>
+                                    <span></span>
                                 </div>
-
-                                <div className="d-flex  mb-2 bi bi-geo-alt-fill">
-                                    <span>{githubData.location}</span>
+                                
+                                {/* Bio */}
+                                <div className="mb-4 border-bottom border-1 border-secondary p-2">
+                                    <i className="bi bi-card-text me-2"></i>
+                                    <span>{githubData.bio}</span>
                                 </div>
-
-                                <p className="mb-4 bi bi-card-text">{githubData.bio}</p>
-
-                                <div className="github-stats">
-                                    <div className="d-flex  mb-2 bi bi-box">
-
+                                
+                                {/* GitHub Stats */}
+                                <div className="githubStats">
+                                    <div className="d-flex align-items-center mb-2 border-bottom border-1 border-secondary p-2">
+                                        <i className="bi bi-box me-2"></i>
                                         <span>Repositories : {githubData.repos}</span>
                                     </div>
-                                    <div className="d-flex  mb-2 bi bi-people">
-
+                                    <div className="d-flex align-items-center mb-2 border-bottom border-1 border-secondary p-2">
+                                        <i className="bi bi-people me-2"></i>
                                         <span>Followers : {githubData.followers}</span>
                                     </div>
-                                    <div className="d-flex bi bi-people">
-
+                                    <div className="d-flex align-items-center p-2 border-1 border-secondary">
+                                        <i className="bi bi-people me-2"></i>
                                         <span>Following : {githubData.following}</span>
                                     </div>
                                 </div>
-                            </Col>
-                        </>
+                            </div>
+                        </div>
                     ) : null}
                 </Modal.Body>
-                <Modal.Footer className="border-0">
-                    <Button variant="outline-secondary" onClick={handleClose}>
+                <Modal.Footer style={modalStyle.githubModal} className="border-1 border-secondary">
+                    <Button variant="light" onClick={handleClose}>
                         Fermer
                     </Button>
                 </Modal.Footer>
             </Modal>
 
             {/* Main Content */}
-            <Container className="py-5">
+            <Container className="my-5 py-4 px-4 shadow rounded">
                 <Row>
                     {/* Section À propos - Colonne de gauche */}
                     <Col lg={6} className="mb-5 mb-lg-0">
@@ -158,8 +187,8 @@ const Home = () => {
                                 alt="John Doe"
                                 fluid
                                 rounded
-                                className="shadow w-100"
-                                style={{ maxHeight: '300px', objectFit: 'cover' }}
+                                className="w-100"
+                                style={{ maxHeight: '250px', objectFit: 'cover' }}
                             />
                         </div>
 
@@ -187,7 +216,7 @@ const Home = () => {
                                     </div>
                                     <ProgressBar
                                         now={skill.level}
-                                        variant="primary"
+                                        variant={skill.variant}
                                         className="rounded-0"
                                         style={{ height: '8px' }}
                                     />
@@ -197,10 +226,9 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-
-            <Footer />
         </>
     );
 };
 
 export default Home;
+

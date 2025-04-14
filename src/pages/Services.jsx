@@ -1,5 +1,4 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import Footer from '../components/Footer';
 import React from 'react';
 import banner from '../assets/banner.jpg';
 import { FaCode, FaMagnifyingGlass } from 'react-icons/fa6';
@@ -57,8 +56,6 @@ const Services = () => {
                     </Row>
                 </Container>
             </section>
-
-            <Footer />
         </>
     );
 };

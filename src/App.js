@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Legales from './pages/Legales';
 import CustomNavbar from './components/Navbar';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Footer from './components/Footer';
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legales" element={<Legales />} />
       </Routes>
+
+      <Footer />
     </>
 
   );
