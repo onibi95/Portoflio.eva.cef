@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Ma Première App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application showcasing a portfolio website with multiple pages including Home, Services, Portfolio, Contact and Legal information.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Dependencies](#dependencies)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+
+## Features
+
+- **Multi-page Navigation**: Built with React Router for seamless page transitions
+- **Responsive Design**: Uses Bootstrap for responsive layouts across devices
+- **Modern UI Components**: Custom navbar, footer, and page-specific components
+- **Contact Form**: Interactive contact functionality
+- **Portfolio Showcase**: Display your work and projects
+
+## Getting Started
+
+To get a local copy up and running, follow these steps:
+
+1. Clone the repository
+   ```
+   git clone <repository-url>
+   ```
+
+2. Install NPM packages
+   ```
+   npm install
+   ```
+
+3. Start the development server
+   ```
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser
+
+## Project Structure
+
+```
+src/
+├── assets/       # Static assets like images and icons
+├── components/   # Reusable UI components
+│   ├── Footer.jsx
+│   └── Navbar.jsx
+├── pages/        # Page components
+│   ├── Home.jsx
+│   ├── Services.jsx
+│   ├── Portfolio.jsx
+│   ├── Contact.jsx
+│   └── Legales.jsx
+├── App.js        # Main application component
+└── index.js      # Application entry point
+```
 
 ## Available Scripts
 
-In the progitject directory, you can run:
+In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `build` folder
 
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React 19.1.0
+- React Router 7.5.0
+- Bootstrap 5.3.5
+- React Bootstrap 2.10.9
+- Bootstrap Icons 1.11.3
+- React Icons 5.5.0
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+This application can be deployed to various platforms:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS Amplify
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+See the [React deployment documentation](https://create-react-app.dev/docs/deployment/) for more information.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
